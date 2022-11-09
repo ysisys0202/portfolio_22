@@ -1,0 +1,28 @@
+{
+  "skills": [
+    {
+      "name": "default",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "name": "HTML",
+      "desc": "Nullam porta tellus risus, nec sodales nisl commodo vitae. I."
+    },
+    {
+      "name": "CSS",
+      "desc": "is in faucibus. Praesent dictum auctor dictum. Donec vel mas."
+    },
+    {
+      "name": "SCSS",
+      "desc": "la eros sed aliquam dignissim. Donec finibus augue."
+    },
+    {
+      "name": "JavaScript",
+      "desc": "Vivamus placerat eu dolor eu ultrices. Mauris a leo."
+    },
+    {
+      "name": "PhotoShop",
+      "desc": "ec eu ligula varius, varius leo ut, porttitor diam. Maecena."
+    }
+  ]
+}

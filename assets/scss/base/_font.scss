@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap");
+@font-face {
+  font-family: "portfolio";
+  src: url("../fonts/portfolio.eot");
+  src: url("../fonts/portfolio.eot") format("embedded-opentype"),
+    url("../fonts/portfolio.ttf") format("truetype"),
+    url("../fonts/portfolio.woff") format("woff"),
+    url("../fonts/portfolio.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+html {
+  font-family: $font-dafault;
+  font-size: 18px;
+  line-height: 1.6667;
+  font-weight: 400;
+}
+body {
+  color: $dark;
+}
+.site-title,
+.content-title,
+.category-title,
+.footer-title {
+  font-family: $font-strong;
+}
+
+.site-title {
+  font-size: 118px;
+  font-weight: 700;
+  /*130px/118px*/
+  line-height: 1.1017;
+  text-align: center;
+}
+.contents {
+  counter-reset: content-counter;
+}
+.content-title {
+  position: relative;
+  padding-left: 0.4em;
+  font-size: 128px;
+  font-weight: 700;
+  /* 150px / 128px */
+  line-height: 1.1719;
+  text-transform: uppercase;
+}
+.content-title::before {
+  position: absolute;
+  top: -1.4em;
+  left: 0;
+  font-size: 48px;
+  counter-increment: content-counter;
+  content: counters(content-counter, ".", decimal-leading-zero);
+}
+.category-title {
+  font-size: 24px;
+  line-height: 1.6667;
+}
+.footer-title {
+  font-size: 118px;
+  font-weight: 700;
+  /*160px / 118px*/
+  line-height: 1.3559;
+  text-align: center;
+}
+@include responsive(D) {
+  .content-title {
+    font-size: 78px;
+  }
+  .content-title::before {
+    font-size: 24px;
+  }
+}
+@include responsive(T) {
+  .site-title,
+  .footer-title {
+    font-size: 78px;
+  }
+}
+@include responsive(M) {
+  .site-title {
+    font-size: 48px;
+  }
+  .footer-title {
+    font-size: 36px;
+  }
+  .content-title {
+    font-size: 36px;
+  }
+}

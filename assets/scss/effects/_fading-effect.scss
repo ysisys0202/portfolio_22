@@ -1,0 +1,16 @@
+.fading-item {
+  opacity: 0;
+
+  &.is-fading {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.fading-vertical {
+  transform: translateY(-40px);
+  transition: opacity 400ms ease-in-out, transform 500ms ease-in-out;
+}
+.fading-horizontal {
+  transform: translateX(100px);
+  transition: opacity 900ms ease-in-out, transform 700ms ease-in-out;
+}

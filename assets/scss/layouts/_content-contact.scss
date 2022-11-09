@@ -1,0 +1,54 @@
+.contact {
+  &-info-item {
+    display: flex;
+    margin: 120px 0;
+    font-size: 48px;
+    /*60px/48px*/
+    line-height: 1.25;
+  }
+
+  &-info-item:nth-child(2n-1) {
+    transform: translate3d(-70%, 0, 0);
+  }
+  &-info-item:nth-child(2n) {
+    justify-content: flex-end;
+    transform: translate3d(70%, 0, 0);
+  }
+  &-info-item dt {
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+  &-info-item:nth-child(2n-1) dt {
+    order: 1;
+  }
+  &-info-item:nth-child(2n) dt {
+    order: 2;
+  }
+  &-info-item:nth-child(2n-1) dt::after {
+    content: ":";
+    margin: 0 8px;
+    font-weight: 400;
+  }
+  &-info-item:nth-child(2n) dt::before {
+    content: ":";
+    margin: 0 8px;
+    font-weight: 400;
+  }
+  &-info-item:nth-child(2n-1) dd {
+    order: 2;
+  }
+  &-info-item:nth-child(2n) dd {
+    order: 1;
+  }
+  @include responsive(T) {
+    &-info-item {
+      font-size: 24px;
+    }
+  }
+  @include responsive(M) {
+    &-info-item {
+      font-size: 18px;
+    }
+  }
+}

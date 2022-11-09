@@ -1,0 +1,50 @@
+body.is-dark {
+  background-color: $dark;
+  color: $beige;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  .global-header {
+    .btn-mode {
+      color: $beige;
+    }
+    .btn-menu .bar {
+      background-color: $beige;
+    }
+  }
+  .side-nav {
+    background-color: $dark;
+  }
+  .home {
+    .blind-item {
+      background-color: $dark;
+    }
+  }
+  .about {
+    .about-article {
+      .img-cover {
+        background-color: $dark;
+      }
+    }
+  }
+  .skill {
+    .skill-item {
+      fill: $beige;
+      &:hover {
+        fill: $purple;
+      }
+    }
+    .skill-desc {
+      p {
+        color: $dark;
+      }
+    }
+  }
+  .portfolio {
+    &-tag {
+      border-color: $beige;
+    }
+    .btn-link {
+      background-color: $beige;
+      color: $dark;
+    }
+  }
+}

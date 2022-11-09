@@ -1,0 +1,82 @@
+.skill {
+  .content-body {
+    position: relative;
+  }
+  &-svg {
+    width: 100%;
+  }
+  &-item {
+    fill: $dark;
+    font-family: $font-strong;
+    font-size: 78px;
+    line-height: 1;
+    cursor: pointer;
+    transition: fill 200ms ease-in-out;
+
+    &:hover {
+      fill: $purple;
+    }
+  }
+  &-desc {
+    position: absolute;
+    top: -10%;
+    left: 53.125%;
+    z-index: -1;
+    width: 450px;
+    &-inner {
+      padding-bottom: 100%;
+      width: 100%;
+      height: 0;
+    }
+    .bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/moon.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: rotate-moon 100000ms infinite linear;
+    }
+    p {
+      @include flexbox;
+      @include pos-center;
+      font-size: 18px;
+      line-height: 1.667;
+      width: 80%;
+      height: 100%;
+    }
+  }
+  @include responsive(D) {
+    &-svg {
+      width: 110%;
+      transform: translateY(25%);
+    }
+  }
+  @include responsive(T) {
+    &-svg {
+      width: 110%;
+      transform: translateY(75%);
+    }
+    &-desc {
+      right: 5%;
+      left: auto;
+    }
+  }
+  @include responsive(M) {
+    &-svg {
+      width: 190%;
+      transform: translateY(95%);
+    }
+    &-desc {
+      left: 2.5%;
+      width: 90%;
+      p {
+        padding: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.portfolio {
+  .category-wrapper {
+    display: flex;
+    padding: 0 300px;
+    width: max-content;
+  }
+  .category {
+    width: max-content;
+    &-title {
+      white-space: nowrap;
+    }
+    &-body {
+      display: flex;
+      align-items: flex-start;
+      width: max-content;
+      margin-top: 20px;
+    }
+  }
+  &-article {
+    @include flexbox(start, stretch);
+    width: max-content;
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+    .img-wrapper {
+      margin-right: 40px;
+      width: max-content;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &-desc {
+    position: relative;
+    width: 720px;
+  }
+  &-title {
+    font-family: $font-strong;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.6667;
+    text-transform: capitalize;
+  }
+  &-info {
+    @include flexbox(start);
+    margin-top: 30px;
+    dt {
+      &::after {
+        content: ":";
+        margin: 0 5px;
+      }
+    }
+  }
+  &-tag-group {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-tag {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid $dark;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6667;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &::before {
+      content: "#";
+      margin-right: 5px;
+    }
+  }
+  .btn-group {
+    @include flexbox(start);
+    margin-top: 30px;
+  }
+  .btn-link {
+    @include flexbox;
+    width: 160px;
+    height: 40px;
+    background-color: $dark;
+    border-radius: 4px;
+    font-size: 18px;
+    color: $beige;
+    text-transform: uppercase;
+    transition: box-shadow 200ms ease-in-out;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    }
+  }
+  .portfolio-article p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 300;
+  }
+  @include responsive(D) {
+    .category-wrapper {
+      padding: 0 2.5%;
+    }
+  }
+  @include responsive(T) {
+    &-article {
+      .img-wrapper {
+        width: 40%;
+      }
+    }
+    &-desc {
+      width: 100vw;
+    }
+    &-title {
+      font-size: 28px;
+    }
+    .portfolio-article p {
+      padding-right: 80px;
+    }
+  }
+  @include responsive(M) {
+    &-title {
+      font-size: 24px;
+    }
+    &-info {
+      margin-top: 15px;
+      font-size: 13px;
+    }
+    &-tag-group {
+      margin-top: 15px;
+    }
+    &-tag {
+      padding: 2px 5px;
+      font-size: 12px;
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+    .btn-group {
+      margin-top: 15px;
+    }
+    .btn-link {
+      width: 80px;
+      height: 20px;
+      font-size: 14px;
+    }
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+    .portfolio-article p {
+      position: static;
+      margin-top: 30px;
+      padding-right: 40px;
+      font-size: 16px;
+    }
+  }
+}

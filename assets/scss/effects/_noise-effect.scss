@@ -1,0 +1,16 @@
+body:before {
+  content: "";
+
+  position: fixed;
+  top: -100%;
+  left: -50%;
+  z-index: 9000;
+
+  background-image: url(../images/noise.png);
+  opacity: 0.6;
+  height: 300%;
+  width: 300%;
+
+  pointer-events: none;
+  animation: noise 2s steps(2) infinite;
+}
